@@ -4,17 +4,29 @@ describe "Static pages" do
 
   describe "Home page" do
 
-    it "should have the content 'Welcome to the coffee shop, come on in!'" do
+    it "should have the title 'Home'" do
       visit '/static_pages/home'
-      page.should have_selector('h1', 
-      									:text => 'Welcome to the coffee shop, come on in!')
+      page.should have_selector('title',
+                        :text => "CoffeeShop | Home")
     end
 
-    it "should have the title 'Home'" do
-		  visit '/static_pages/home'
-		  page.should have_selector('title',
-		                    :text => "CoffeeShop | Home")
-		end
+    it "should have the content 'CoffeeShop'" do
+      visit '/static_pages/home'
+      page.should have_selector('h1', 
+      									:text => 'CoffeeShop')
+    end
+
+    it "should have the content 'Start your coffee shop'" do
+      visit '/static_pages/home'
+      page.should have_selector('h2', 
+                        :text => 'Start your coffee shop')
+    end
+
+    it "should have the content 'or join one of these fine establishments'" do
+      visit '/static_pages/home'
+      page.should have_selector('h3', 
+                        :text => 'or join one of these fine establishments')
+    end
   end
 
   describe "Help page" do
