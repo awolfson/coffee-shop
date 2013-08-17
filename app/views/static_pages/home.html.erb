@@ -1,72 +1,7 @@
-<style type="text/css">
-	body {
-		margin: 0;
-	}
-	.container {
-		width: 960px;
-		margin: auto;
-	}
-	header {
-		background-color: #000000;
-		color: #FFFFFF;
-	}
-	header a {
-		color: #FFFFFF;
-		text-decoration: none;
-	}
-	header a:hover {
-		text-decoration: underline;
-	}
-	header .container div {
-		display: inline-block;
-	}
-	#logo {
-		padding-left: 6px;
-		margin: 16px 0;
-	}
-	#menu {
-		float: right;
-	}
-	#menu li {
-		padding: 0 6px;
-		display: inline-block;
-	}
-	#content {
-		text-align: center;
-	}
-	h1 {
-		font-size: 1em;
-		margin: 0;
-	}
-	footer {
-		text-align: center;
-		margin-top: 30px;
-		padding: 20px;
-		background-color: #000000;
-		color: #FFFFFF;
-	}
-</style>
-
-<header>
-	<div class="container">
-		<div id="logo"><h1>CoffeeShop</h1></div>
-		<div id="menu">
-			<ul>
-				<li><a href="\static_pages\home">Home</a></li>
-				<li><a href="\static_pages\about">About</a></li>
-				<li><a href="\static_pages\help">Help</a></li>
-				<li><a href="\static_pages\contact">Contact</a></li>
-			</ul>
-		</div>
-	</div>
-</header>
-<div id="content" class="container">
+<div class="center hero-unit">
 	<h2>Start your coffee shop</h2>
 	<h3>-- or join one of these fine establishments --</h3>
-	<img src="http://static.flickr.com/3021/2353360842_53d54be119.jpg" />
+	<%= link_to image_tag("coffee_shop.jpg", alt: "Inside the CoffeeShop"), '#' %>
+	<br /><br />
+	<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 </div>
-<footer>
-	<div class="container">
-		<span>Hosting stimulating conversations since 2013</span>
-	</div>
-</footer>
