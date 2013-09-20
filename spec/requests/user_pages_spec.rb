@@ -19,8 +19,12 @@ describe "User pages" do
         expect { click_button :submit }.not_to change(User, :count)
       end
 
-      it "should render error messages" do
-        page.should have_selector("div", id: "error_explanation")
+      describe "should display error messages" do
+        before { click_button :submit }
+
+        it { should have_selector("title",                 text: full_title("Sign Up")) }
+        it { should have_selector("div",                   id: "error_explanation") }
+        it { should have_error_message("error") }
       end
     end
 
@@ -31,8 +35,27 @@ describe "User pages" do
         fill_in "Password",     with: "foobar"
         fill_in "Confirmation", with: "foobar"
       end
+
       it "should create a user" do
         expect { click_button :submit }.to change(User, :count).by(1)
+      end
+
+      describe "after saving the user" do
+        before { click_button submit }
+        let(:user) { User.find_by_email('user@example.com') }
+
+        it { should have_selector('title', text: user.name) }
+        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+        it { should have_link('Sign Out') }
+      end
+
+      describe "followed by signout" do
+        before do
+          click_button submit
+          click_link "Sign Out"
+        end
+
+        it { should have_link('Sign In') }
       end
     end
   end
