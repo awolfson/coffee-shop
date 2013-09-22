@@ -8,13 +8,16 @@ class UsersController < ApplicationController
   end
 
   def create
-	@user = User.new(params[:user])
-	if @user.save
-    sign_in @user
-		flash[:success] = "Welcome to CoffeeShop!"
-		redirect_to @user
-	else
-		render 'new'
-	end
+  	@user = User.new(name: params[:name], 
+                    email: params[:email], 
+                    password: params[:password], 
+                    password_confirmation: params[:password_confirmation])
+  	if @user.save
+      sign_in @user
+  		flash[:success] = "Welcome to CoffeeShop!"
+  		redirect_to @user
+  	else
+  		render 'new'
+  	end
   end
 end

@@ -6,8 +6,8 @@ describe "User pages" do
   describe "Signup page" do
   	before { visit signup_path }
 
-	it { should have_selector("h2",    text: "Sign Up") }
-	it { should have_selector("title", text: full_title("Sign Up")) }
+	it { should have_h2_tag("Sign Up") }
+	it { should have_title_tag(full_title("Sign Up")) }
   end
 
   describe "signup" do
@@ -22,18 +22,15 @@ describe "User pages" do
       describe "should display error messages" do
         before { click_button :submit }
 
-        it { should have_selector("title",                 text: full_title("Sign Up")) }
-        it { should have_selector("div",                   id: "error_explanation") }
+        it { should have_title_tag(full_title("Sign Up")) }
+        it { should have_div_tag("error_explanation") }
         it { should have_error_message("error") }
       end
     end
 
     describe "with valid information" do
       before do
-        fill_in "Name",         with: "Example User"
-        fill_in "Email",        with: "user@example.com"
-        fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        full_signin()
       end
 
       it "should create a user" do
@@ -41,17 +38,17 @@ describe "User pages" do
       end
 
       describe "after saving the user" do
-        before { click_button submit }
+        before { click_button :submit }
         let(:user) { User.find_by_email('user@example.com') }
 
-        it { should have_selector('title', text: user.name) }
-        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+        it { should have_title_tag(user.name) }
+        it { should have_success_message('Welcome') }
         it { should have_link('Sign Out') }
       end
 
       describe "followed by signout" do
         before do
-          click_button submit
+          click_button :submit
           click_link "Sign Out"
         end
 
@@ -64,8 +61,8 @@ describe "User pages" do
 	 let(:user) { FactoryGirl.create(:user) }
 	 before { visit user_path(user) }
 
-	it { should have_selector('h2',      text: user.name) }
-  	it { should have_selector('title', text: user.name) }
+	it { should have_h2_tag(user.name) }
+  	it { should have_title_tag(user.name) }
   end	
 
 
