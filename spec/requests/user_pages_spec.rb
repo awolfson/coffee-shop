@@ -30,7 +30,7 @@ describe "User pages" do
 
     describe "with valid information" do
       before do
-        full_signin()
+        signup()
       end
 
       it "should create a user" do
@@ -65,5 +65,41 @@ describe "User pages" do
   	it { should have_title_tag(user.name) }
   end	
 
+  describe "edit" do
+    let(:user) { FactoryGirl.create(:user) }
+    before do 
+      valid_signin user
+      visit edit_user_path(user)
+    end
 
+    describe "page" do
+      it { should have_h2_tag("Update Your Profile") }
+      it { should have_title_tag("Edit User") }
+      it { should have_link('Change Avatar', href: 'http://gravatar.com/emails') }
+    end
+
+    describe "with valid information" do
+      let(:new_name)  { "New Name" }
+      let(:new_email) { "new@example.com" }
+      before do
+        fill_in "Name",             with: new_name
+        fill_in "Email",            with: new_email
+        fill_in "Password",         with: user.password
+        fill_in "Confirm Password", with: user.password
+        click_button "Save Changes"
+      end
+
+      it { should have_title_tag(new_name) }
+      it { should have_success_message() }
+      it { should have_link('Sign Out', href: signout_path) }
+      specify { user.reload.name.should  == new_name }
+      specify { user.reload.email.should == new_email }
+    end
+
+    describe "with invalid information" do
+      before { click_button "Save Changes" }
+
+      it { should have_content('error') }
+    end
+  end
 end
