@@ -15,3 +15,9 @@ RSpec::Matchers.define :have_div_tag do |id|
     page.should have_selector('div', id: id)
   end
 end
+
+RSpec::Matchers.define :have_li_tag do |text|
+  match do |page|
+    page.should have_selector('li', text: text)
+  end
+end
