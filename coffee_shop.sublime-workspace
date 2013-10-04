@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"have",
+				"have_link"
+			],
+			[
 				"user",
 				"user"
 			],
@@ -58,10 +62,6 @@
 			[
 				"Runtim",
 				"RuntimeError"
-			],
-			[
-				"have",
-				"have_selector"
 			],
 			[
 				"text",
@@ -199,7 +199,7 @@
 			"file": "app/controllers/users_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1205,
+				"buffer_size": 1425,
 				"line_ending": "Windows"
 			}
 		},
@@ -207,7 +207,7 @@
 			"file": "spec/requests/user_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 3431,
+				"buffer_size": 4335,
 				"line_ending": "Windows"
 			}
 		},
@@ -215,39 +215,15 @@
 			"file": "spec/requests/authentication_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 3549,
+				"buffer_size": 4132,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/models/user_spec.rb",
+			"file": "spec/support/signin_helpers.rb",
 			"settings":
 			{
-				"buffer_size": 3889,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/users/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 145,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "spec/factories.rb",
-			"settings":
-			{
-				"buffer_size": 211,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "lib/tasks/sample_data.rake",
-			"settings":
-			{
-				"buffer_size": 604,
+				"buffer_size": 538,
 				"line_ending": "Windows"
 			}
 		}
@@ -284,21 +260,26 @@
 	},
 	"file_history":
 	[
+		"/C/Ruby/coffee_shop/spec/models/user_spec.rb",
+		"/C/Ruby/coffee_shop/app/models/user.rb",
+		"/C/Ruby/coffee_shop/app/views/users/new.html.erb",
+		"/C/Ruby/coffee_shop/app/views/users/_signin_form.html.erb",
+		"/C/Ruby/coffee_shop/app/views/users/edit.html.erb",
+		"/C/Ruby/coffee_shop/spec/support/signin_helpers.rb",
+		"/C/Ruby/coffee_shop/lib/tasks/sample_data.rake",
+		"/C/Ruby/coffee_shop/app/views/users/_user.html.erb",
+		"/C/Ruby/coffee_shop/app/views/users/index.html.erb",
+		"/C/Ruby/coffee_shop/spec/factories.rb",
+		"/C/Ruby/coffee_shop/.gitignore",
 		"/C/bat/push_oldest_things.bat",
 		"/C/bat/repopulate_rails_db.bat",
 		"/C/bat/start_coffee_shop.bat",
 		"/C/Ruby/coffee_shop/db/migrate/20131001015635_add_admin_to_users.rb",
-		"/C/Ruby/coffee_shop/app/views/users/_user.html.erb",
 		"/C/Ruby/coffee_shop/app/assets/stylesheets/custom.css.scss",
-		"/C/Ruby/coffee_shop/spec/factories.rb",
-		"/C/Ruby/coffee_shop/lib/tasks/sample_data.rake",
 		"/C/Ruby/coffee_shop/coffee_shop.sublime-project",
 		"/C/Ruby/coffee_shop/lib/tasks/kill_postgres_connections.rake",
-		"/C/Ruby/coffee_shop/spec/support/signin_helpers.rb",
 		"/C/Ruby/coffee_shop/spec/support/tag_matchers.rb",
-		"/C/Ruby/coffee_shop/app/views/users/index.html.erb",
 		"/C/Ruby/coffee_shop/app/views/layouts/_header.html.erb",
-		"/C/Ruby/coffee_shop/app/views/users/edit.html.erb",
 		"/C/Ruby/coffee_shop/app/controllers/sessions_controller.rb",
 		"/C/Ruby/coffee_shop/app/helpers/sessions_helper.rb",
 		"/C/Ruby/coffee_shop/spec/support/message_matchers.rb",
@@ -307,14 +288,11 @@
 		"/C/Ruby/coffee_shop/spec/helpers/user_helper_spec.rb",
 		"/C/Ruby/coffee_shop/config/routes.rb",
 		"/C/Ruby/coffee_shop/app/controllers/users_controller.rb",
-		"/C/Ruby/coffee_shop/app/views/users/new.html.erb",
 		"/C/Ruby/coffee_shop/app/helpers/application_helper.rb",
 		"/C/Ruby/coffee_shop/features/signing_in.feature",
 		"/C/Ruby/coffee_shop/features/step_definitions/authentication_steps.rb",
 		"/C/Ruby/coffee_shop/app/views/users/show.html.erb",
 		"/C/Ruby/coffee_shop/app/controllers/application_controller.rb",
-		"/C/Ruby/coffee_shop/spec/models/user_spec.rb",
-		"/C/Ruby/coffee_shop/app/models/user.rb",
 		"/C/Ruby/coffee_shop/app/assets/javascripts/application.js",
 		"/C/Ruby/coffee_shop/app/helpers/users_helper.rb",
 		"/C/Ruby/coffee_shop/app/helpers/static_pages_helper.rb",
@@ -415,6 +393,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"redirect_to",
 			"describe",
 			"@user",
 			"'/static_pages/contact'",
@@ -464,7 +443,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -499,15 +478,15 @@
 					"file": "app/controllers/users_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1205,
+						"buffer_size": 1425,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								845,
-								845
+								397,
+								397
 							]
 						],
 						"settings":
@@ -517,7 +496,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -527,15 +506,15 @@
 					"file": "spec/requests/user_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 3431,
+						"buffer_size": 4335,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2825,
-								2825
+								1454,
+								1454
 							]
 						],
 						"settings":
@@ -545,7 +524,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1577.0,
+						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -555,15 +534,15 @@
 					"file": "spec/requests/authentication_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 3549,
+						"buffer_size": 4132,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								40,
-								40
+								2215,
+								2215
 							]
 						],
 						"settings":
@@ -573,110 +552,30 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 870.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "spec/models/user_spec.rb",
+					"file": "spec/support/signin_helpers.rb",
 					"settings":
 					{
-						"buffer_size": 3889,
+						"buffer_size": 538,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3747,
-								3747
+								177,
+								177
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/User/RSpec.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2300.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/users/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 145,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								145,
-								145
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "spec/factories.rb",
-					"settings":
-					{
-						"buffer_size": 211,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								119,
-								119
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/User/RSpec.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "lib/tasks/sample_data.rake",
-					"settings":
-					{
-						"buffer_size": 604,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								301,
-								301
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},

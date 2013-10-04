@@ -17,5 +17,8 @@
 		</div>
 		<%= render "layouts/footer" %>
 		<%= debug(params) if Rails.env.development? %>
+		<%= request.flash["notice"] = "Hello from the request object!" %>
+		<%= request.fullpath() %>
+		<%= request.server_software() %>
 	</body>
 </html>

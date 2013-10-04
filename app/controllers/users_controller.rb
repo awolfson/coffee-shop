@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:edit, :update, :index, :destroy]
+  before_filter :not_signed_in_user, only: [:new, :create]
   before_filter :correct_user, only: [:edit, :update]
   before_filter :admin_user, only: [:destroy]
 
@@ -12,10 +13,7 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.new(name: params[:name], 
-                    email: params[:email], 
-                    password: params[:password], 
-                    password_confirmation: params[:password_confirmation])
+  	@user = User.new(params[:user])
   	if @user.save
       sign_in @user
   		flash[:success] = "Welcome to CoffeeShop!"
@@ -43,8 +41,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "User destroyed."
+    if current_user? User.find(params[:id])
+      flash[:error] = "Sorry, you cannot delete yourself."
+    else
+      User.find(params[:id]).destroy
+      flash[:success] = "User destroyed."
+    end
     redirect_to users_url
   end
 
@@ -64,5 +66,9 @@ class UsersController < ApplicationController
 
     def admin_user
       redirect_to root_url unless current_user.admin?
+    end
+
+    def not_signed_in_user
+      redirect_to root_url if signed_in?
     end
 end

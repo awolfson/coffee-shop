@@ -9,6 +9,11 @@ describe "Authentication" do
 
     it { should have_h2_tag('Sign In') }
     it { should have_title_tag('Sign In') }
+    it { should have_link("Sign In") }
+    it { should_not have_link("Profile") }
+    it { should_not have_link("Settings") }
+    it { should_not have_link("Users") }
+    it { should_not have_link("Sign Out") }
   end
 
   describe "signin" do
@@ -111,6 +116,17 @@ describe "Authentication" do
           it "should render the desired protected page" do
             page.should have_title_tag(full_title("Edit User"))
           end
+
+          describe "when signing in again" do
+            before do
+              delete signout_path
+              valid_signin user
+            end
+
+            it "should render the default (profile) page" do
+              page.should have_title_tag(user.name)
+            end
+          end
         end
       end
 
@@ -129,5 +145,22 @@ describe "Authentication" do
       end
     end
 
+  end
+
+  describe "as a signed-in user" do
+    let(:user) { FactoryGirl.create(:user) }
+    before { valid_signin user }
+
+    describe "invoking the Users#new action should redirect to home page" do
+      before { get new_user_path }
+
+      it { should_not have_h2_tag("Sign Up") }
+    end
+
+    describe "invoking the Users#create action should redirect to home page" do
+      before { post users_path }
+
+      it { should_not have_success_message('Welcome') }
+    end
   end
 end
