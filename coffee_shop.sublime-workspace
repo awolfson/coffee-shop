@@ -4,12 +4,20 @@
 		"selected_items":
 		[
 			[
-				"have",
-				"have_link"
+				"margin",
+				"margin-left"
 			],
 			[
 				"user",
-				"user"
+				"user_path"
+			],
+			[
+				"have",
+				"have_error_message"
+			],
+			[
+				"have_",
+				"have_title_tag"
 			],
 			[
 				"valid",
@@ -78,10 +86,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"margin",
-				"margin"
 			],
 			[
 				"di",
@@ -188,26 +192,26 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/layouts/application.html.erb",
+			"file": "spec/models/user_spec.rb",
 			"settings":
 			{
-				"buffer_size": 581,
-				"line_ending": "Windows"
+				"buffer_size": 5317,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/users_controller.rb",
+			"file": "spec/models/micropost_spec.rb",
 			"settings":
 			{
-				"buffer_size": 1425,
-				"line_ending": "Windows"
+				"buffer_size": 1251,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "spec/requests/user_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 4335,
+				"buffer_size": 4371,
 				"line_ending": "Windows"
 			}
 		},
@@ -215,15 +219,31 @@
 			"file": "spec/requests/authentication_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 4132,
+				"buffer_size": 5335,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/support/signin_helpers.rb",
+			"file": "spec/requests/micropost_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 538,
+				"buffer_size": 785,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/static_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 2206,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/microposts_controller.rb",
+			"settings":
+			{
+				"buffer_size": 389,
 				"line_ending": "Windows"
 			}
 		}
@@ -260,52 +280,64 @@
 	},
 	"file_history":
 	[
-		"/C/Ruby/coffee_shop/spec/models/user_spec.rb",
 		"/C/Ruby/coffee_shop/app/models/user.rb",
-		"/C/Ruby/coffee_shop/app/views/users/new.html.erb",
+		"/C/Ruby/coffee_shop/app/views/users/show.html.erb",
+		"/C/Ruby/coffee_shop/app/assets/stylesheets/custom.css.scss",
+		"/C/Ruby/coffee_shop/app/models/micropost.rb",
+		"/C/Ruby/coffee_shop/app/controllers/microposts_controller.rb",
+		"/C/Ruby/coffee_shop/app/controllers/static_pages_controller.rb",
+		"/C/Ruby/coffee_shop/app/views/shared/_feed.html.rb",
+		"/C/Ruby/coffee_shop/app/views/shared/_feed_item.html.rb",
+		"/C/Ruby/coffee_shop/app/views/static_pages/home.html.erb",
+		"/C/Ruby/coffee_shop/spec/support/tag_matchers.rb",
+		"/C/Ruby/coffee_shop/app/views/shared/_micropost_form.html.erb",
+		"/C/Ruby/coffee_shop/app/views/shared/_error_messages.html.erb",
 		"/C/Ruby/coffee_shop/app/views/users/_signin_form.html.erb",
-		"/C/Ruby/coffee_shop/app/views/users/edit.html.erb",
-		"/C/Ruby/coffee_shop/spec/support/signin_helpers.rb",
+		"/C/Ruby/coffee_shop/app/views/shared/_user_info.html.erb",
+		"/C/Ruby/coffee_shop/app/helpers/sessions_helper.rb",
+		"/C/Ruby/coffee_shop/app/controllers/users_controller.rb",
+		"/C/Ruby/coffee_shop/config/routes.rb",
+		"/C/Ruby/coffee_shop/app/views/microposts/_micropost.html.erb",
 		"/C/Ruby/coffee_shop/lib/tasks/sample_data.rake",
+		"/C/Ruby/coffee_shop/db/migrate/20131007003503_create_microposts.rb",
+		"/C/Ruby/coffee_shop/db/migrate/20130820014058_create_users.rb",
+		"/C/Ruby/coffee_shop/spec/factories.rb",
+		"/C/Ruby/coffee_shop/app/views/layouts/application.html.erb",
+		"/C/Ruby/coffee_shop/spec/requests/user_pages_spec.rb",
+		"/C/Ruby/coffee_shop/spec/requests/authentication_pages_spec.rb",
+		"/C/Ruby/coffee_shop/app/controllers/sessions_controller.rb",
 		"/C/Ruby/coffee_shop/app/views/users/_user.html.erb",
 		"/C/Ruby/coffee_shop/app/views/users/index.html.erb",
-		"/C/Ruby/coffee_shop/spec/factories.rb",
+		"/C/Ruby/coffee_shop/app/helpers/users_helper.rb",
+		"/C/Ruby/coffee_shop/spec/support/signin_helpers.rb",
+		"/C/Ruby/poignant/dwemthy.rb",
+		"/C/Ruby/coffee_shop/spec/models/user_spec.rb",
+		"/C/Ruby/coffee_shop/app/views/users/new.html.erb",
+		"/C/Ruby/coffee_shop/app/views/users/edit.html.erb",
 		"/C/Ruby/coffee_shop/.gitignore",
 		"/C/bat/push_oldest_things.bat",
 		"/C/bat/repopulate_rails_db.bat",
 		"/C/bat/start_coffee_shop.bat",
 		"/C/Ruby/coffee_shop/db/migrate/20131001015635_add_admin_to_users.rb",
-		"/C/Ruby/coffee_shop/app/assets/stylesheets/custom.css.scss",
 		"/C/Ruby/coffee_shop/coffee_shop.sublime-project",
 		"/C/Ruby/coffee_shop/lib/tasks/kill_postgres_connections.rake",
-		"/C/Ruby/coffee_shop/spec/support/tag_matchers.rb",
 		"/C/Ruby/coffee_shop/app/views/layouts/_header.html.erb",
-		"/C/Ruby/coffee_shop/app/controllers/sessions_controller.rb",
-		"/C/Ruby/coffee_shop/app/helpers/sessions_helper.rb",
 		"/C/Ruby/coffee_shop/spec/support/message_matchers.rb",
-		"/C/Ruby/coffee_shop/spec/requests/authentication_pages_spec.rb",
 		"/C/Ruby/coffee_shop/spec/support/utilities.rb",
 		"/C/Ruby/coffee_shop/spec/helpers/user_helper_spec.rb",
-		"/C/Ruby/coffee_shop/config/routes.rb",
-		"/C/Ruby/coffee_shop/app/controllers/users_controller.rb",
 		"/C/Ruby/coffee_shop/app/helpers/application_helper.rb",
 		"/C/Ruby/coffee_shop/features/signing_in.feature",
 		"/C/Ruby/coffee_shop/features/step_definitions/authentication_steps.rb",
-		"/C/Ruby/coffee_shop/app/views/users/show.html.erb",
 		"/C/Ruby/coffee_shop/app/controllers/application_controller.rb",
 		"/C/Ruby/coffee_shop/app/assets/javascripts/application.js",
-		"/C/Ruby/coffee_shop/app/helpers/users_helper.rb",
 		"/C/Ruby/coffee_shop/app/helpers/static_pages_helper.rb",
 		"/C/bat/start_spork.bat",
 		"/C/Ruby/coffee_shop/db/migrate/20130903010036_add_remember_token_to_users.rb",
-		"/C/Ruby/coffee_shop/spec/requests/user_pages_spec.rb",
 		"/C/Ruby/coffee_shop/app/views/sessions/new.html.erb",
 		"/C/Ruby/coffee_shop/spec/helpers/application_helper_spec.rb",
 		"/C/Ruby/coffee_shop/spec/spec_helper.rb",
-		"/C/Ruby/coffee_shop/app/views/static_pages/home.html.erb",
 		"/C/Ruby/coffee_shop/spec/requests/static_pages_spec.rb",
 		"/C/Ruby/coffee_shop/config/environments/production.rb",
-		"/C/Ruby/coffee_shop/app/views/shared/_error_messages.html.erb",
 		"/C/Ruby/coffee_shop/Gemfile",
 		"/C/Ruby/coffee_shop/config/environments/test.rb",
 		"/C/Ruby/coffee_shop/config/database.yml",
@@ -393,6 +425,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sign_in",
+			"@user",
 			"redirect_to",
 			"describe",
 			"@user",
@@ -443,60 +477,61 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
+					"file": "spec/models/user_spec.rb",
 					"settings":
 					{
-						"buffer_size": 581,
+						"buffer_size": 5317,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								371,
-								371
+								5306,
+								5306
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2997.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/controllers/users_controller.rb",
+					"file": "spec/models/micropost_spec.rb",
 					"settings":
 					{
-						"buffer_size": 1425,
+						"buffer_size": 1251,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								397,
-								397
+								278,
+								278
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"syntax": "Packages/User/RSpec.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 171.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -506,15 +541,15 @@
 					"file": "spec/requests/user_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 4335,
+						"buffer_size": 4371,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1454,
-								1454
+								42,
+								42
 							]
 						],
 						"settings":
@@ -524,7 +559,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -534,15 +569,15 @@
 					"file": "spec/requests/authentication_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 4132,
+						"buffer_size": 5335,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2215,
-								2215
+								134,
+								134
 							]
 						],
 						"settings":
@@ -552,25 +587,79 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 870.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "spec/support/signin_helpers.rb",
+					"file": "spec/requests/micropost_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 538,
+						"buffer_size": 785,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								177,
-								177
+								322,
+								322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "spec/requests/static_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 2206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/controllers/microposts_controller.rb",
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
 							]
 						],
 						"settings":
